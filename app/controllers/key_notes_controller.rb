@@ -1,0 +1,2 @@
+class KeyNotesController < ApplicationController
+end

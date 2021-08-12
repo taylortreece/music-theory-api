@@ -1,0 +1,2 @@
+class ScaleNotesController < ApplicationController
+end

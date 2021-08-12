@@ -1,0 +1,2 @@
+class ScaleChordProgressionsController < ApplicationController
+end
