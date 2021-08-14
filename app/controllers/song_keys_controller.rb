@@ -1,0 +1,2 @@
+class SongKeysController < ApplicationController
+end

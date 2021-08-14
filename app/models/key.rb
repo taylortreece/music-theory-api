@@ -5,6 +5,8 @@ class Key < ApplicationRecord
     has_many :scales, through: :key_scales
     has_many :scale_chords
     has_many :chords, through: :scale_chords
+    has_many :song_keys
+    has_many :songs, through: :song_keys
 
     # builder methods
 

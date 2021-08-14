@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :song_chords
+  resources :song_keys
+  resources :songs
   resources :scale_chord_progressions
   resources :scale_chords
   resources :key_scales
@@ -12,4 +15,5 @@ Rails.application.routes.draw do
   resources :notes
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get '/keys/:type/:name', to: 'keys#show'
+  post '/songs/new', to: 'songs#create'
 end

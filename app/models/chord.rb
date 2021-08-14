@@ -5,6 +5,8 @@ class Chord < ApplicationRecord
     has_many :scales, through: :scale_chords
     has_many :chord_progression_chords
     has_many :chord_progressions, through: :chord_progression_chords
+    has_many :song_chords
+    has_many :songs, through: :song_chords
 
     def self.calculate_note_id(root_note, interval)
         id = root_note.id + interval
