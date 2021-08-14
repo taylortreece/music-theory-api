@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :song_scales
   resources :song_chords
   resources :song_keys
   resources :songs

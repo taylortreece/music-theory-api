@@ -8,7 +8,7 @@ class KeysController < ApplicationController
                     :notes, 
                     :chords => {include: [:notes]}
                 ]}
-            }
+            },
         )
     end
 

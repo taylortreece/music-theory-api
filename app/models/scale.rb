@@ -5,6 +5,8 @@ class Scale < ApplicationRecord
     has_many :keys, through: :key_scales
     has_many :scale_chords
     has_many :chords, through: :scale_chords
+    has_many :song_scales
+    has_many :songs, through: :song_scales
     serialize :intervals, Array
     serialize :degrees, Hash
 

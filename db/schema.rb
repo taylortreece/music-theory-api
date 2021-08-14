@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_14_023547) do
+ActiveRecord::Schema.define(version: 2021_08_14_174215) do
 
   create_table "chord_notes", force: :cascade do |t|
     t.integer "chord_id"
@@ -127,9 +127,19 @@ ActiveRecord::Schema.define(version: 2021_08_14_023547) do
     t.index ["song_id"], name: "index_song_keys_on_song_id"
   end
 
+  create_table "song_scales", force: :cascade do |t|
+    t.integer "song_id"
+    t.integer "scale_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["scale_id"], name: "index_song_scales_on_scale_id"
+    t.index ["song_id"], name: "index_song_scales_on_song_id"
+  end
+
   create_table "songs", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
   end
 
 end
