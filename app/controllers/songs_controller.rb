@@ -24,11 +24,13 @@ class SongsController < ApplicationController
     end
 
     def update
-
+        song = Song.find_by(name: params[:name])
+        chords = params[:chords].map{|chord| Chord.find_by(name: chord[:name])}
+        song.update(chords: chords)
     end
 
     def delete
-
+        Song.find_by(name: params[:name]).delete
     end
 
     private 

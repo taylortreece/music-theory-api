@@ -17,4 +17,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get '/keys/:type/:name', to: 'keys#show'
   post '/songs/new', to: 'songs#create'
+  put '/songs/:name/update', to: 'songs#update'
+  put '/songs/:name/delete', to: 'songs#delete'
+
 end
